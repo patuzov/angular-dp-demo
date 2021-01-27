@@ -1,0 +1,7 @@
+<h2>Customer component</h2>
+<div *ngFor="let user of users">
+    <span>
+        {{user.id}} | {{user.username}}
+    </span>
+</div>
+<div *ngIf="users.length === 0">No data</div>
