@@ -1,5 +1,15 @@
-<div (click)="onClick()">
-    <span>        
-        {{user.id}} | {{user.login}}
-    </span>
-</div>
+<mat-card (click)="onClick()">
+    <mat-card-header>
+        <mat-card-title>{{user.login}}</mat-card-title>
+        <mat-card-subtitle>{{user.site_admin ? 'Admin' : 'User'}}</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <mat-card-content>
+        <p>
+            Irgendwelches Text...
+        </p>
+    </mat-card-content> -->
+    <mat-card-actions>
+        <button color="warn" mat-button>Delete</button>
+        <button mat-button>Edit</button>
+    </mat-card-actions>
+</mat-card>

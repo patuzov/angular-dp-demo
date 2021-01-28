@@ -3,3 +3,13 @@
 .error {
     color: red;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+background-color: #fefefe; }
+
+.fab {
+    position: absolute !important;
+    right: 20px;
+    bottom: 20px;
+}

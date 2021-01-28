@@ -1,19 +1,26 @@
-<div id="header">
-    <a routerLink="" routerLinkActive="active" 
-        [routerLinkActiveOptions]="{ exact: true}" >Home</a> | 
-    <a routerLink="users" routerLinkActive="active">Users</a> | 
-    <a routerLink="roles" routerLinkActive="active">Roles</a>
-</div>
+<p>
+    <mat-toolbar color="primary">
+    <a mat-icon-button routerLink="" routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true}">
+        <mat-icon>group</mat-icon>
+    </a>
+    <a mat-icon-button routerLink="users" routerLinkActive="active">Users</a>
+    <a mat-icon-button routerLink="roles" routerLinkActive="active">Roles</a> 
+  </mat-toolbar>
+</p>
 
-<h1>{{title | test}} {{ 76.13 | currency }}</h1>
+<!-- <h1>{{title | test}} {{ 76.13 | currency }}</h1> -->
 
 <router-outlet></router-outlet>
-
+<!-- 
+<button mat-fab color="accent" class="fab" (click)="onClick()">
+    <mat-icon>add</mat-icon>
+</button> -->
 
 <!-- 
 <hr/>
 <input [(ngModel)]="title">
 
-<button (click)="onClick()">Click me</button>
+
 <img [src]="imgSrc" alt="Rostock image">
  -->

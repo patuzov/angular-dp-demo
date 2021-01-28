@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { RolesComponent } from './roles/roles.component';
 import { HomeComponent } from './home/home.component';
 import { UserModule } from './user/user.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { UserModule } from './user/user.module';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    UserModule
+    UserModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    MaterialModule
   ],
   providers: [],  
   bootstrap: [AppComponent]
