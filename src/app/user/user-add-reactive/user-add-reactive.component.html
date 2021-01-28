@@ -1,0 +1,19 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="login">Login: </label>
+        <input id="login" type="text" formControlName="login">
+        <div *ngIf="!loginControl.valid">
+            <span>Login is required and should be min 4</span>   
+        </div>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input id="email" type="email" formControlName="email">
+    </div>
+    <div>
+        <label for="admin">Is Admin:</label>
+        <input id="admin" type="checkbox" formControlName="isAdmin">
+    </div>
+
+    <button type="submit" [disabled]="!userForm.valid" >Submit</button>
+</form>

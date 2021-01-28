@@ -5,8 +5,9 @@ import { UserComponent } from './user/user.component';
 import { UserViewComponent } from './user-view/user-view.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { UserAddComponent } from './user-add/user-add.component';
+import { UserAddReactiveComponent } from './user-add-reactive/user-add-reactive.component';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [    
@@ -14,18 +15,21 @@ import { FormsModule } from '@angular/forms';
     UserComponent,
     UserViewComponent,
     UserEditComponent,
-    UserAddComponent
+    UserAddComponent,
+    UserAddReactiveComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     UsersComponent,
     UserViewComponent,
     UserEditComponent,
-    UserAddComponent
+    UserAddComponent,
+    UserAddReactiveComponent
   ]
 })
 export class UserModule { }
