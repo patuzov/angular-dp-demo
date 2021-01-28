@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from '../user';
 import { UserService } from '../user.service';
 
@@ -10,7 +11,9 @@ import { UserService } from '../user.service';
 export class UsersComponent implements OnInit {
   users: User[] = [];
   
-  constructor(private userService: UserService) {
+  constructor(
+    private userService: UserService,
+    private router: Router) {
   }
 
   ngOnInit(): void {
@@ -19,7 +22,7 @@ export class UsersComponent implements OnInit {
     });
   }
 
-  onUserClicked(login: string): void {
-    console.log(`User ${login} was clicked`);
+  onUserClicked(id: string): void {
+    this.router.navigate(['users', id]);
   }
 }

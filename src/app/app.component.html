@@ -1,9 +1,16 @@
+<div id="header">
+    <a routerLink="" routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true}" >Home</a> | 
+    <a routerLink="users" routerLinkActive="active">Users</a> | 
+    <a routerLink="roles" routerLinkActive="active">Roles</a>
+</div>
+
 <h1>{{title | test}} {{ 76.13 | currency }}</h1>
 
 <router-outlet></router-outlet>
-
+<!-- 
 <hr/>
 <input [(ngModel)]="title">
 <button (click)="onClick()">Click me</button>
 <img [src]="imgSrc" alt="Rostock image">
-
+ -->

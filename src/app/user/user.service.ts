@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, pipe } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 import { User } from './user';
 
 @Injectable({
@@ -11,6 +12,13 @@ export class UserService {
   headers: HttpHeaders = new HttpHeaders();
 
   constructor(private httpClient: HttpClient) { }
+
+  getUser(id: string): Observable<User> {
+    return this.getUsers().pipe(
+      tap(x => console.log(x)),
+      map(x => x.find(u => u.id == id))
+    );
+  }
 
   getUsers(): Observable<User[]> {
     return this.httpClient.get<User[]>('https://api.github.com/users', 

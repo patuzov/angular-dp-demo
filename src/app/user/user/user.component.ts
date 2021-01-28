@@ -18,6 +18,6 @@ export class UserComponent implements OnInit {
 
   onClick(): void {
     // ....
-    this.userClicked.emit(this.user.login);
+    this.userClicked.emit(this.user.id);
   }
 }
