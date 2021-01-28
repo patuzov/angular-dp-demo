@@ -1,0 +1,9 @@
+<h2>Users component</h2>
+
+<app-user 
+    *ngFor="let user of users"
+    [userData]="user" 
+    (userClicked)="onUserClicked($event)">
+</app-user>
+
+<div *ngIf="users.length === 0">No data</div>
