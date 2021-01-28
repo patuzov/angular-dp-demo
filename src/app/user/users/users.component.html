@@ -1,5 +1,6 @@
 <h2>Users component</h2>
 
+<a [routerLink]="['/users', 'add']">Add</a>
 <app-user 
     *ngFor="let user of users"
     [userData]="user" 

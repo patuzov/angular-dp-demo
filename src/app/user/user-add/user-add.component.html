@@ -1,0 +1,18 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <div>
+        <label for="login">Login: </label>
+        <input id="login" [(ngModel)]="user.login" type="text" name="login" required
+            #login="ngModel">
+        <span *ngIf="!login.valid && login.touched" class="error">*</span>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input id="email" [(ngModel)]="user.email" type="email" name="emaill" required>
+    </div>
+    <div>
+        <label for="admin">Is Admin:</label>
+        <input id="admin" [(ngModel)]="user.site_admin" type="checkbox" name="isAdmin">
+    </div>
+
+    <button type="submit" [disabled]="!userForm.form.valid" >Submit</button>
+</form>
